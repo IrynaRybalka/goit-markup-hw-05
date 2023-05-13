@@ -677,7 +677,10 @@ button {
     width: calc((100% - 48) / 3);
 }
 
-.card-set-item:hover .overlay-text,
+.card-set-item:hover .overlay-text {
+    transform: translateY(0%);
+}
+
 .card-set-item:focus .overlay-text {
     transform: translateY(0%);
 }
