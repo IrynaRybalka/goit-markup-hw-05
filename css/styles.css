@@ -163,7 +163,8 @@ button {
 
 .header-nav-link:hover,
 .header-nav-link:focus {
-    color: var(--color-ocean);
+    color: #404bbf;
+
 }
 
 .header-nav-link::after {
@@ -176,8 +177,12 @@ button {
     width: 100%;
     height: 4px;
     border-radius: 2px;
+    bottom: -1px;
 
+}
 
+.header-nav-link.active {
+    color: #404bbf;
 }
 
 .header-nav-link.active::after {
@@ -463,14 +468,14 @@ button {
     padding: 12px 24px;
     letter-spacing: 0.04em;
 
-    transition: background-color var(--animation), color var(--animation), border var(--animation), box-shadow var(--animation);
+    transition: background-color var(--animation), color var(--animation), border-color var(--animation), box-shadow var(--animation);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
     background-color: #404BBF;
     color: #FFFFFF;
-    border: 1px solid transparent;
+    border-color: 1px solid transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 2px 1px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -630,7 +635,7 @@ button {
     color: var(--color-light-slate);
     margin: 0;
 
-    transition: border var(--animation), color var(--animation);
+    transition: border-color var(--animation), color var(--animation);
 
 
 }
@@ -639,7 +644,7 @@ button {
 
 .company-icons-link:hover,
 .company-icons-link:focus {
-    border: 1px solid var(--color-ocean);
+    border-color: 1px solid var(--color-ocean);
     color: var(--color-ocean);
 }
 
@@ -672,7 +677,7 @@ button {
     width: calc((100% - 48) / 3);
 }
 
-.card-set-item:hover .overlay {
+.card-set-item:hover .overlay-text {
     transform: translateY(0%);
 }
 
@@ -715,7 +720,7 @@ button {
 */
 
 
-.overlay {
+/* .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -730,15 +735,30 @@ button {
     padding-left: 32px;
 
     transition: transform var(--animation);
-}
+} */
 
 .overlay-text {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translateY(100%);
+    background-color: #4D5AE5;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    padding-bottom: 164px;
+    padding-right: 32px;
+    padding-left: 32px;
+
+    transition: transform var(--animation);
     color: #F4F4FD;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
 
 }
@@ -919,7 +939,7 @@ button {
     left: 50%;
 
     width: 408px;
-    height: 584px;
+    min-height: 576px;
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -945,6 +965,17 @@ button {
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-icon {}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+}
+
+
+.modal-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
