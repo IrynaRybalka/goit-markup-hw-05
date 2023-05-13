@@ -677,7 +677,8 @@ button {
     width: calc((100% - 48) / 3);
 }
 
-.card-set-item:hover .overlay-text {
+.card-set-item:hover .overlay-text,
+.card-set-item:focus .overlay-text {
     transform: translateY(0%);
 }
 
@@ -747,10 +748,7 @@ button {
     background-color: #4D5AE5;
     width: 100%;
     height: 100%;
-    padding-top: 40px;
-    padding-bottom: 164px;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding: 40px 32px;
 
     transition: transform var(--animation);
     color: #F4F4FD;
