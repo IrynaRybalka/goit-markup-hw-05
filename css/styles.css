@@ -676,10 +676,10 @@ button {
     width: calc((100% - 48) / 3);
 }
 
-.card-set-item:hover .overlay-text,
+/* .card-set-item:hover .overlay-text,
 .card-set-item:focus .overlay-text {
     transform: translateY(0%);
-}
+} */
 
 
 
@@ -699,6 +699,11 @@ button {
 .card-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
+}
+
+.card-link:hover .overlay-text,
+.card-link:focus .overlay-text {
+    transform: translateY(0%);
 }
 
 .portfolio-card-container {
